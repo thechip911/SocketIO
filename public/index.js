@@ -11,6 +11,6 @@ sio.on('disconnect', () => {
   console.log('disconnected');
 });
 
-sio.on('awesome', (data) => {
-  console.log(data);
-});
+// sio.on('awesome', (data) => {
+//   console.log(data);
+// });
