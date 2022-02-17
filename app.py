@@ -19,6 +19,7 @@ def disconnect(sid):
 @sio.event
 async def message(sid, data):
     print(sid, data)
-    await sio.emit('awesome', {"data": f"data sent from frontend is {data}"}, to=sid) # room can also be used here instead of to
+    # await sio.emit('awesome', {"data": f"data sent from frontend is {data}"}, to=sid) # room can also be used here instead of to
+    return json.dumps({"data": f"data sent from frontend is {data}"})
 
 
