@@ -16,7 +16,8 @@ def disconnect(sid):
     print(sid, 'disconnected')
 
 
-@sio.on('my_event', namespace='/chat')
-def my_event(sid, data):
-    print(data)
-    sio.emit('my response', data, room=sid)
+@sio.event
+def message(sid, data):
+    print(sid, data)
+
+    
